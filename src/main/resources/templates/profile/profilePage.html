@@ -11,19 +11,22 @@
     <form th:action="@{/profile}" th:object="${profileForm}" method="post" class="col m8 s12 offset-m2">
         <div class="row">
             <div class="input-field col s6">
-                <input th:field="${profileForm.twitterHandle}" id="twitterHandle" type="text"/>
+                <input th:field="${profileForm.twitterHandle}" id="twitterHandle" type="text" th:errorclass="invalid"/>
                 <label for="twitterHandle">Identyfikator Twitter</label>
+                <div th:errors="*{twitterHandle}" class="red-text">Błąd</div>
             </div>
             <div class="input-field col s6">
-                <input th:field="${profileForm.email}" id="email" type="text"/>
+                <input th:field="${profileForm.email}" id="email" type="text" th:errorclass="invalid"/>
                 <label for="email">Adres e-mail</label>
+                <div th:errors="*{email}" class="red-text">Błąd</div>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s6">
                 <input th:field="${profileForm.birthDate}"
-                       id="birthDate" type="text" th:placeholder="${dateFormat}"/>
+                       id="birthDate" type="text" th:errorclass="invalid" th:placeholder="${dateFormat}"/>
                 <label for="birthDate">Data urodzenia</label>
+                <div th:errors="*{birthDate}" class="red-text">Błąd</div>
             </div>
         </div>
         <div class="row s12">
