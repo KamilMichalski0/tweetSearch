@@ -1,4 +1,4 @@
-package michalski.kamil;
+package michalski.kamil.profile;
 
 
 import java.time.LocalDate;
