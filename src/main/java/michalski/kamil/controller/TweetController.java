@@ -23,11 +23,9 @@ public class TweetController {
     public String hello(@RequestParam(defaultValue = "SpringJestFajny") String search,
                         Model model) {
         SearchResults searchResults = twitter.searchOperations().search(search);
-        List<String> tweets = searchResults.getTweets()
-                .stream()
-                .map(Tweet::getText)
-                .collect(Collectors.toList());
+        List<Tweet> tweets = searchResults.getTweets();
         model.addAttribute("tweets", tweets);
+        model.addAttribute("search", search);
         return "resultPage";
     }
 }
