@@ -11,6 +11,9 @@
     <div class="col s12 center red-text" th:text="${error}" th:if="${error}">
         Błąd ładowania pliku
     </div>
+    <div class="col m8 s12 offset-m2">
+        <img th:src="@{/uploadedPicture}" width="100" height="100"/>
+    </div>
     <form th:action="@{/upload}" method="post" enctype="multipart/form-data"
           class="col m8 s12 offset-m2">
         <div class="input-field col s6">
