@@ -13,8 +13,8 @@
         th:text="|Wyniki wyszukiwania ${search}|">Tweety</h2>
     <ul class="collection">
         <li class="collection-item avatar" th:each="tweet : ${tweets}">
-            <img th:src="${tweet.user.profileImageUrl}" alt="" class="circle"/>
-            <span class="title" th:text="${tweet.user.name}">Użytkownik</span>
+            <img th:src="${tweet.profileImageUrl}" alt="" class="circle"/>
+            <span class="title" th:text="${tweet.user}">Użytkownik</span>
             <p th:text="${tweet.text}">Treść tweeta</p>
         </li>
     </ul>

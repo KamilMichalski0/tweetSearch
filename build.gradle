@@ -32,6 +32,7 @@ dependencies {
 	compile ('org.springframework.boot:spring-boot-starter-social-twitter')
 	compile ('org.webjars:materializecss:0.96.0')
 	compile ('org.webjars:jquery:2.1.4')
+	compile ('com.fasterxml.jackson.datatype:jackson-datatype-jsr310')
 	runtime('org.springframework.boot:spring-boot-devtools')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
